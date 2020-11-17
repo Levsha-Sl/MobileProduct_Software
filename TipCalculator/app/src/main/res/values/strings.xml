@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">TipCalculator</string>
+    <string name="et_amount">Enter amount</string>
+    <string name="et_amount_hint">Input text</string>
+    <string name="tv_label_total">Total</string>
+    <string name="tv_label_tip">Tip</string>
+</resources>
