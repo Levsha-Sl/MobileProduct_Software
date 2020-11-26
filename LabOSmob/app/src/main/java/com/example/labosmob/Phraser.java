@@ -1,3 +1,5 @@
+package com.example.labosmob;
+
 public class Phraser {
     public static String PhraserGen() {
         //Создайте три набора слов для выбора. Можете добавлять собственные слова!
