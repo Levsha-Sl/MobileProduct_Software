@@ -3,4 +3,5 @@
     <string name="app_name">ЛабОСмоб</string>
     <string name="textOutput">Всё, что нам нужно - это</string>
     <string name="gen">обновить</string>
+    <string name="tv_result">- это всё, что нам нужно.</string>
 </resources>
