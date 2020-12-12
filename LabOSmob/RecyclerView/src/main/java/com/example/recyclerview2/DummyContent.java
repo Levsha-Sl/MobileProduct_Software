@@ -3,9 +3,8 @@ package com.example.recyclerview2;
 import java.util.ArrayList;
 import java.util.List;
 
-/** Вспомогательный класс для заполнения списка */
 public class DummyContent {
-    /** Списочный массив элементов */
+
     public static final List<DummyItem> ITEMS = new ArrayList<DummyItem>();
     private static final int COUNT = 25;
 
@@ -19,18 +18,4 @@ public class DummyContent {
         }
     }
 
-    /** Создание класса элементов для списка. */
-    public static class DummyItem {
-        public final String id;
-        public final String content;
-        public final String details;
-
-        public DummyItem(String id, String content, String details) {
-            this.id = id;
-            this.content = content;
-            this.details = details;
-        }
-        @Override
-        public String toString() { return content; }
-    }
 }
