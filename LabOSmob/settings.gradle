@@ -1,3 +1,4 @@
+include ':TipCalculator'
 include ':RecyclerView'
 include ':app'
 rootProject.name = "LabOSmob"
