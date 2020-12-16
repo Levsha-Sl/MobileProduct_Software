@@ -1,4 +1,0 @@
-include ':p0051basicviews'
-include ':p0001basicviews'
-include ':app'
-rootProject.name = "HeloWorld"
