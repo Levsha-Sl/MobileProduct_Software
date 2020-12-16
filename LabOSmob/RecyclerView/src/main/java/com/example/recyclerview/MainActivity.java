@@ -1,4 +1,4 @@
-package com.example.recyclerview2;
+package com.example.recyclerview;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -9,6 +9,7 @@ import android.os.Bundle;
 public class MainActivity extends AppCompatActivity {
 
     private RecyclerView List;
+    private RViewAdapter adapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +22,12 @@ public class MainActivity extends AppCompatActivity {
     ///получение RecyclerView
     private void initList(){
         List = findViewById(R.id.list);
+
         // будем отображать элементы линейно
         List.setLayoutManager(new LinearLayoutManager(this));
+
+        //кто отвечает за заполнение элементов
+        adapter = new RViewAdapter(DummyContent.ITEMS);
+        List.setAdapter(adapter);
     }
 }

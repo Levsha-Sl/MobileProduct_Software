@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/1921328056/HeloWorld.iml" filepath="$PROJECT_DIR$/.idea/modules/1921328056/HeloWorld.iml" group="HeloWorld" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1619828918/app.iml" filepath="$PROJECT_DIR$/.idea/modules/-1619828918/app.iml" group="HeloWorld/app" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/2000281050/p0001basicviews.iml" filepath="$PROJECT_DIR$/.idea/modules/2000281050/p0001basicviews.iml" group="HeloWorld/p0001basicviews" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/p0051basicviews.iml" filepath="$PROJECT_DIR$/.idea/modules/p0051basicviews.iml" group="HeloWorld/p0051basicviews" />
+    </modules>
+  </component>
+</project>
