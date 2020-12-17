@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 import com.google.gson.Gson;
@@ -21,10 +22,10 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Cat murzik = new Cat();
-        murzik.name = "Мурзик";
-        murzik.age = 9;
-        murzik.color = Color.BLACK;
-        murzik.address = new Address("Arbat", "Moscow", "Russia");
+        murzik.name = "Муслин";
+        murzik.age = 13;
+        murzik.color = Color.GREEN;
+        murzik.address = new Address("Улица", "Город", "Нашараша");
 
         CatToJson(murzik);
         CatFromJson(JsonText);
@@ -49,6 +50,9 @@ public class MainActivity extends AppCompatActivity {
 
         TextView tv_cat = (TextView) findViewById(R.id.tv_cat);
         tv_cat.setText("Кот: " + cat.name + ", " + cat.age + "лет\nЦвет:");
+        View cat_color = (View) findViewById(R.id.cat_color);
+        cat_color.setBackgroundColor(cat.color);
+
 
         Log.i("GSON", "Имя: " + cat.name
                 + "\nВозраст: " + cat.age

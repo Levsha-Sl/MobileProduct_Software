@@ -30,4 +30,14 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.101" />
 
+    <View
+        android:id="@+id/cat_color"
+        android:layout_width="325dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="60dp"
+        android:layout_marginTop="16dp"
+        android:background="#197808"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_cat" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
