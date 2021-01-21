@@ -9,4 +9,6 @@
     <string name="buttonClick_text0">кнопка нажата</string>
     <string name="buttonClick_text1">долгое нажатие кнопки</string>
     <string name="button">кнопка</string>
+    <string name="touchStatus">действие: %s его индекс: %d ID: %d X: %d Y: %d</string>
+    <string name="gestureStatusText" />
 </resources>

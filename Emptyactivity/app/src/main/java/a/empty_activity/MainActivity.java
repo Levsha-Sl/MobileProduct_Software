@@ -20,9 +20,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         setTitle(R.string.menu_home);
-
-
-
     }
 
     @Override
@@ -41,22 +38,27 @@ public class MainActivity extends AppCompatActivity {
                 setTitle(R.string.menu_home);
                 return true;
             case R.id.action_buttonCpick:
-                setContentView(R.layout.activity_buttonclick);
+                setContentView(R.layout.activity_button_click);
                 setTitle(R.string.menu_buttonCpick);
+                Click(findViewById(R.id.button));
                 return true;
             case R.id.action_motionEvent:
-                setContentView(R.layout.activity_motionevent);
+                setContentView(R.layout.activity_motion_event);
                 setTitle(R.string.menu_motionEvent);
+                Touch(findViewById(R.id.layout));
                 return true;
             case R.id.action_commonGestures:
-                setContentView(R.layout.activity_commongestures);
-                setTitle(R.string.menu_commonGestures);
-                return true;
+                /*setContentView(R.layout.activity_common_gestures);
+                setTitle(R.string.menu_commonGestures);*/
+                startActivity(new Intent(MainActivity.this, CommonGestures.class));
+                break;
         }
-        return super.onOptionsItemSelected(item);
+        //return super.onOptionsItemSelected(item);
+        return true;
     }
 
-    public void ButtonClick(View v) {
+
+    public void Click(View v) {
         v.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
                 buttonClick(R.string.buttonClick_text0);
@@ -69,10 +71,7 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
-
-
-    public void TouchLayout(View v) {
+    public void Touch(View v) {
         v.setOnTouchListener(new ConstraintLayout.OnTouchListener() {
             public boolean onTouch(View v, MotionEvent m) {
                 handleTouch(m);
@@ -121,8 +120,9 @@ public class MainActivity extends AppCompatActivity {
                     actionString = "";
             }
 
-            String touchStatus = "Action: " + actionString + " Index: " +
-                    actionIndex + " ID: " + id + " X: " + x + " Y: " + y;
+            String touchStatus = String.format
+                    (getString(R.string.touchStatus), actionString,actionIndex,id,x,y);
+
             if (id == 0)
                 textView1.setText(touchStatus);
             else
