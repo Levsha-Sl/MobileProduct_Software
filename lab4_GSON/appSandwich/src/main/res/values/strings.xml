@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Sandwich Club</string>
 
+    <string name="sandwich_name">Sandwich name</string>
+
     <!-- Detail Activity-->
     <string name="detail_also_known_as_label">Also known as:</string>
     <string name="detail_place_of_origin_label">Place of origin:</string>
