@@ -10,7 +10,7 @@
         android:id="@+id/textClick"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView"
+        android:text="@string/buttonClick_text"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,7 +21,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="60dp"
-        android:text="Button"
+        android:onClick="ButtonClick"
+        android:text="@string/button"
         app:layout_constraintEnd_toEndOf="@+id/textClick"
         app:layout_constraintStart_toStartOf="@+id/textClick"
         app:layout_constraintTop_toBottomOf="@+id/textClick" />
