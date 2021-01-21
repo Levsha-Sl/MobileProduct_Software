@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import androidx.appcompat.app.AppCompatActivity;
 import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.squareup.picasso.Picasso;
@@ -15,16 +16,27 @@ public class DetailActivity extends AppCompatActivity {
     public static final String EXTRA_POSITION = "extra_position";
     private static final int DEFAULT_POSITION = -1;
 
+    private ImageView ivImage;
+    private TextView tvDescription;
+    private TextView tvOrigin;
+    private TextView tvAlsoKnown;
+    private TextView tvIngridients;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        ImageView ingredientsIv = findViewById(R.id.image_iv);
+        ivImage = findViewById(R.id.image_iv);
+        tvIngridients = findViewById(R.id.ingredients_tv);
+        tvOrigin = findViewById(R.id.origin_tv);
+        tvAlsoKnown = findViewById(R.id.also_known_tv);
+        tvDescription = findViewById(R.id.description_tv);
 
         Intent intent = getIntent();
         if (intent == null) {
             closeOnError();
+            return;
         }
 
         int position = intent.getIntExtra(EXTRA_POSITION, DEFAULT_POSITION);
@@ -43,10 +55,10 @@ public class DetailActivity extends AppCompatActivity {
             return;
         }
 
-        populateUI();
+        populateUI(sandwich);
         Picasso.with(this)
                 .load(sandwich.getImage())
-                .into(ingredientsIv);
+                .into(ivImage);
 
         setTitle(sandwich.getMainName());
     }
@@ -56,7 +68,17 @@ public class DetailActivity extends AppCompatActivity {
         Toast.makeText(this, R.string.detail_error_message, Toast.LENGTH_SHORT).show();
     }
 
-    private void populateUI() {
+    private void populateUI(Sandwich sandwich) {
+        if (sandwich.getAlsoKnownAs().size() > 0)
+            tvAlsoKnown.setText(String.join(", ", sandwich.getAlsoKnownAs()));
+        else
+            tvAlsoKnown.setText("-");
+        if (sandwich.getIngredients().size() > 0)
+            tvIngridients.setText(String.join(", ", sandwich.getIngredients()));
+        else
+            tvIngridients.setText("-");
 
+        tvDescription.setText(sandwich.getDescription());
+        tvOrigin.setText(sandwich.getPlaceOfOrigin());
     }
 }
