@@ -1,2 +1,3 @@
+include ':appSandwich'
 include ':app'
 rootProject.name = "lab4_GSON"
