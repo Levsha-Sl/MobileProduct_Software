@@ -4,18 +4,24 @@
     xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainActivity">
     <item
-        android:id="@+id/action_buttonCpick"
+        android:id="@+id/action_home"
         android:orderInCategory="1"
+        android:title="@string/menu_home"
+        android:onClick="onSettingsMenuClick"
+        app:showAsAction="never"/>
+    <item
+        android:id="@+id/action_buttonCpick"
+        android:orderInCategory="2"
         android:title="@string/menu_buttonCpick"
         app:showAsAction="never"/>
     <item
         android:id="@+id/action_commonGestures"
-        android:orderInCategory="2"
+        android:orderInCategory="3"
         android:title="@string/menu_commonGestures"
         app:showAsAction="never"/>
     <item
         android:id="@+id/action_motionEvent"
-        android:orderInCategory="3"
+        android:orderInCategory="4"
         android:title="@string/menu_motionEvent"
         app:showAsAction="never"/>
 </menu>

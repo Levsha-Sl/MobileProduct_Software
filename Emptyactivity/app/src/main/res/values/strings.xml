@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Empty activity</string>
+    <string name="menu_home">Home</string>
     <string name="menu_buttonCpick">ButtonClick</string>
     <string name="menu_motionEvent">MotionEvent</string>
     <string name="menu_commonGestures">CommonGestures</string>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Пустая активность</string>
+    <string name="menu_home">Главная</string>
+    <string name="menu_buttonCpick">Нажатие кнопки</string>
+    <string name="menu_motionEvent">Событие движения</string>
+    <string name="menu_commonGestures">Общие жесты</string>
+</resources>
